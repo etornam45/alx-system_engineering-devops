@@ -1,5 +1,17 @@
 #!/bin/bash
 
+
+# ANSI escape codes for different colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+RESET='\033[0m' # Reset color to default
+
+
+
 if [ "$#" -ne 2 ]; then
   echo "Usage: $0 <filename> '<script content>'"
   exit 1
@@ -33,4 +45,14 @@ git push
 ./"$filename"
 
 echo "Script '$filename' created, committed, and pushed successfully."
+
+# ASCII art for "Congratulations" in big letters
+echo -e "${RED}██████╗ ██╗   ██╗███████╗██╗  ██╗${RESET}"
+echo -e "${GREEN}██╔══██╗██║   ██║██╔════╝██║  ██║${RESET}"
+echo -e "${YELLOW}██████╔╝██║   ██║███████╗███████║${RESET}"
+echo -e "${BLUE}██╔══██╗██║   ██║╚════██║██╔══██║${RESET}"
+echo -e "${MAGENTA}██████╔╝╚██████╔╝███████║██║  ██║${RESET}"
+echo -e "${CYAN}╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝${RESET}"
+
 ## ALX hope you like my virus
+
