@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -type f -name "*.html" -newermt $(date -r ../ +%Y%m%d%H%M.%S) -exec cp {} ../ \
+rsync -u --ignore-existing --include */ --include *.HTML --exclude * ./ ../
