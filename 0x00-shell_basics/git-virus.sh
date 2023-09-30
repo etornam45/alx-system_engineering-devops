@@ -12,7 +12,7 @@ if [[ -n $(git status -s) ]]; then
   git commit -m "$commit_message"
 
   # Push the code to the remote repository (assuming origin and main branch)
-  git push origin main
+  git push
 else
   echo "No changes to commit."
 fi
