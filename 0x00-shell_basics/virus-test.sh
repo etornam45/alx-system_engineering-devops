@@ -26,7 +26,9 @@ if [ -e "$filename" ]; then
   echo "Error: File '$filename' already exists."
   rm "$filename"
   git add "$filename" && git commit -m "removed '$filename'." && git push
+	
 fi
+
 
 # Create the script file
 echo "#!/bin/bash" > "$filename"
@@ -34,13 +36,13 @@ echo "$script_content" >> "$filename"
 chmod +x "$filename"
 
 # Add the new script to the Git repository
-git add "$filename"
+#git add "$filename"
 
 # Commit the change with the specified message
-git commit -m "$commit_message"
+#git commit -m "$commit_message"
 
 # Push the changes to the remote repository
-git push
+#git push
 
 # Run the new script 
 ./"$filename"
