@@ -1,2 +1,0 @@
-#!/bin/bash
-echo etornam adm dialout cdrom floppy sudo audio dip video plugdev netdev
